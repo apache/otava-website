@@ -100,8 +100,8 @@ This command prints interesting results of all runs of the test and a list of ch
 A change-point is a moment when a metric value starts to differ significantly from the values of the earlier runs and
 when the difference is statistically significant.
 
-Otava calculates the probability (P-value) that the change point was caused by chance - the closer to zero, the more
-"sure" it is about the regression or performance improvement. The smaller is the actual magnitude of the change, the
+Otava calculates the probability (P-value) that the change point was not caused by chance - the closer to zero, the more
+ certain it is about the regression or performance improvement. The smaller the magnitude of the change, the
 more data points are needed to confirm the change, therefore Otava may not notice the regression immediately after the first run
 that regressed.
 

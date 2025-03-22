@@ -25,7 +25,9 @@ export default function HomepageFeatures(): JSX.Element {
     <section className={styles.features}>
       <div className="container">
         <div className={clsx("text--center", "padding-horiz--md")}>
-          <h2>Otava - Mapping Performance Changes</h2>
+          <h2>
+            Otava - Change Detection for Continuous Performance Engineering
+          </h2>
           <p className={styles.description}>
             Otava performs statistical analysis of performance test results
             stored in CSV files, PostgreSQL, BigQuery, or Graphite database. It

@@ -162,8 +162,9 @@ $ otava regressions <test or group> --branch <branch> --since-version <version>
 $ otava regressions <test or group> --branch <branch> --since-commit <commit>
 ```
 
-Sometimes when working on a feature branch, you may run the tests multiple times,
-creating more than one data point. To ignore the previous test results, and compare
+When comparing two branches, you generally want to compare the tails of both test histories, and
+ specifically a stable sequence from the end that doesn't contain any changes in itself.
+ To ignore the older test results, and compare
 only the last few points on the branch with the tail of the main branch,
 use the `--last <n>` selector. E.g. to check regressions on the last run of the tests
 on the feature branch:
