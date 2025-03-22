@@ -66,6 +66,10 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: true,
+    },
     // TODO: Replace with your project's social card
     image: "img/social-card.png",
     navbar: {
