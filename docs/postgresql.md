@@ -111,8 +111,8 @@ See [otava.yaml](../examples/postgresql/otava.yaml) for the example configuratio
 
 [docker-compose.yaml](../examples/postgresql/docker-compose.yaml) contains example config required to connect to PosgreSQL:
 1. `POSTGRES_*` environment variables are used to pass connection details to the container.
-2. `HUNTER_CONFIG` is the path to the configuration file described above.
-3. `BRANCH` variable is used within `HUNTER_CONFIG` to analyze experiment results only for a specific branch.
+2. `OTAVA_CONFIG` is the path to the configuration file described above.
+3. `BRANCH` variable is used within `OTAVA_CONFIG` to analyze experiment results only for a specific branch.
 
 
 ### CLI arguments

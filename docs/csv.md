@@ -1,7 +1,7 @@
 # Importing results from CSV
 
 :::tip
-See [hunter.yaml](https://github.com/apache/hunter/tree/master/examples/csv/hunter.yaml) for the full example configuration.
+See [otava.yaml](https://github.com/apache/otava/tree/master/examples/csv/otava.yaml) for the full example configuration.
 :::
 
 ## Tests
@@ -22,7 +22,7 @@ tests:
 ## Example
 
 ```bash
-docker-compose -f examples/csv/docker-compose.yaml run --build hunter bin/hunter analyze local.sample
+docker-compose -f examples/csv/docker-compose.yaml run --build otava bin/otava analyze local.sample
 ```
 
 Expected output:

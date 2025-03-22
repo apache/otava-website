@@ -10,10 +10,10 @@
 ./poetryw install
 ```
 
-* Run the development version of hunter using poetry:
+* Run the development version of otava using poetry:
 
 ```
-./poetryw run hunter ...
+./poetryw run otava ...
 ```
 
 See the [poetry docs](https://python-poetry.org/docs) for more.
