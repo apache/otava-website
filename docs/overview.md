@@ -17,5 +17,3 @@ sidebar_position: 1
 - [BigQuery](big-query.md)
 - [CSV](csv.md)
 - [Annotating Change Points in Grafana](grafana.md)
-
-This is a demo page for the portal page of documentation. Remember to follow the trademark [policy](https://www.apache.org/foundation/marks/) and [guide](https://www.apache.org/foundation/marks/guide) to provide your content.

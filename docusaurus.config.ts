@@ -50,13 +50,13 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./docs/sidebars.ts",
-          editUrl: `https://github.com/apache/${siteRepoName}/tree/main/`,
+          editUrl: `https://github.com/apache/${siteRepoName}/tree/master/`,
         },
         blog: {
           blogSidebarCount: "ALL",
           blogSidebarTitle: "All our posts",
           showReadingTime: true,
-          editUrl: `https://github.com/apache/${siteRepoName}/tree/main/`,
+          editUrl: `https://github.com/apache/${siteRepoName}/tree/master/`,
         },
         theme: {
           customCss: "./src/css/custom.css",
