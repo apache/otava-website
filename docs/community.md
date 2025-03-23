@@ -21,7 +21,7 @@ development discussions.
 [dev-unsubscribe@otava.apache.org](mailto:dev-unsubscribe@otava.apache.org)
 * Archives: [https://lists.apache.org/list.html?dev@otava.apache.org](https://lists.apache.org/list.html?dev@otava.apache.org)
 
-**Commit list**: [commits@otava.apache.org](mailto:commits@otava.apache.org). This list tracks Apache Otava commits.
+**Commit List**: [commits@otava.apache.org](mailto:commits@otava.apache.org). This list tracks Apache Otava commits.
 
 * Subscribe: send an emailto [commits-subscribe@otava.apache.org](mailto:commits-subscribe@otava.apache.org)
 * Unsubscribe: send an email to
