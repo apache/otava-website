@@ -85,6 +85,12 @@ const config: Config = {
           label: "Docs",
         },
         {
+          type: "doc",
+          docId: "community",
+          position: "right",
+          label: "Community",
+        },
+        {
           type: "dropdown",
           label: "ASF",
           position: "right",
