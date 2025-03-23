@@ -123,7 +123,7 @@ my-product.test-2:
 
 You can inherit more than one template.
 
-## Example
+## Validating Performance of a Feature Branch
 
 The `otava regressions` command can work with feature branches.
 
