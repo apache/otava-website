@@ -27,7 +27,7 @@ export default function Home(): JSX.Element {
     <Layout title="Welcome">
       <header className={clsx("hero", styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">Apache Otava®</h1>
+          <h1 className="hero__title">Apache Otava</h1>
         </div>
       </header>
       <main>

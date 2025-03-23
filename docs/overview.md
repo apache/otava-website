@@ -3,7 +3,7 @@ sidebar_label: About
 sidebar_position: 1
 ---
 
-# Welcome to Apache Otava®
+# Welcome to Apache Otava
 
 ## Getting Started
 - [Installation](install.md)
