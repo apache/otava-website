@@ -1,36 +1,20 @@
-# Apache Website Template
+# Apache Otava Website
 
-This project contains a template website that aims to follow all the various required Apache Website Policies.
+This project is a website for Apache Otava..
 
-This template was generated using [Docusaurus](https://docusaurus.io/).
+This website was built using [Docusaurus](https://docusaurus.io/) version of [apache-website-template](https://github.com/apache/apache-website-template/tree/docusaurus).
 
-## Usage
+## Installation
 
-You can directly copy from the root path of this template repository to your website repository.
+Run `pnpm install` to install all dependencies.
 
-> [!NOTE]
-> TODO: Integrate it with [template support of Docusaurus](https://docusaurus.io/docs/api/misc/create-docusaurus#git-strategy).
+Note: Make sure you have installed [pnpm](https://pnpm.io) before running the command.
 
-Most of the configurations are inherited from Docusaurus https://docusaurus.io/docs/configuration.
+## Dev server
 
-Specificly, our template defines a few metadata fields to customize for every project:
+Run `pnpm start` for a dev server. Navigate to [http://localhost:3000/](http://localhost:3000/). The application will
+automatically reload if you change any of the source files.
 
-```typescript
-const projectName = "Template";
-const mainRepoName = "apache-website-template";
-const siteRepoName = "apache-website-template";
-```
+## Build
 
-For example, Apache Fury can customize these fields as:
-
-```typescript
-const projectName = "Fury";
-const mainRepoName = "incubator-fury";
-const siteRepoName = "incubator-fury-site";
-```
-
-More placeholders and preset are under developed.
-
-## Deploy
-
-This template contains [a GitHub Actions workflow](.github/workflows/deploy.yml) to deploy the generated website content to the `asf-site` branch. It would work automatically, without any other ections required.
+Run pnpm build to build the project.
