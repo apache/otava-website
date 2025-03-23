@@ -8,7 +8,7 @@ sidebar_position: 1
 ## Getting Started
 - [Installation](install.md)
 - [Getting Started](getting-started.md)
-- [Contributing](contributing.md)
+- [Contribute](contribute.md)
 - [Basics](basics.md)
 
 ## Data Sources

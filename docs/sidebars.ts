@@ -30,7 +30,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Getting Started",
-      items: ["install", "getting-started", "contributing", "basics"],
+      items: ["install", "getting-started", "contribute", "basics"],
       collapsed: false,
     },
     {
