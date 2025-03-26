@@ -23,7 +23,7 @@ development discussions.
 
 **Commit List**: [commits@otava.apache.org](mailto:commits@otava.apache.org). This list tracks Apache Otava commits.
 
-* Subscribe: send an emailto [commits-subscribe@otava.apache.org](mailto:commits-subscribe@otava.apache.org)
+* Subscribe: send an email to [commits-subscribe@otava.apache.org](mailto:commits-subscribe@otava.apache.org)
 * Unsubscribe: send an email to
 [commits-unsubscribe@otava.apache.org](mailto:commits-unsubscribe@otava.apache.org)
 * Archives: [https://lists.apache.org/list.html?commits@otava.apache.org](https://lists.apache.org/list.html?commits@otava.apache.org)
