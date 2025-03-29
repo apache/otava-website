@@ -16,7 +16,7 @@
 # under the License.
 
 github:
-  description: "Apache Otava Website"
+  description: "Website for Apache Otava (incubating)"
   homepage: https://otava.apache.org/
   features:
     issues: false
@@ -40,4 +40,3 @@ publish:
 #   pullrequests: commits@foo.apache.org
 #   jobs:         commits@foo.apache.org
 #   discussions:  commits@foo.apache.org
-
