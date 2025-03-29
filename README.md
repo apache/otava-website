@@ -1,6 +1,6 @@
 # Apache Otava Website
 
-This project is a website for Apache Otava..
+This project is a website for Apache Otava (incubating).
 
 This website was built using [Docusaurus](https://docusaurus.io/) version of [apache-website-template](https://github.com/apache/apache-website-template/tree/docusaurus).
 
