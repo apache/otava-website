@@ -109,7 +109,7 @@ See [otava.yaml](https://github.com/apache/otava/blob/master/examples/postgresql
 
 [schema.sql](https://github.com/apache/otava/blob/master/examples/postgresql/init-db/schema.sql) contains the schema used in this example.
 
-[docker-compose.yaml](https://github.com/apache/otava/blob/master/examples/postgresql/docker-compose.yaml) contains example config required to connect to PosgreSQL:
+[docker-compose.yaml](https://github.com/apache/otava/blob/master/examples/postgresql/docker-compose.yaml) contains example config required to connect to PostgreSQL:
 1. `POSTGRES_*` environment variables are used to pass connection details to the container.
 2. `OTAVA_CONFIG` is the path to the configuration file described above.
 3. `BRANCH` variable is used within `OTAVA_CONFIG` to analyze experiment results only for a specific branch.
