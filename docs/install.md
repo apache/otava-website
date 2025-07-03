@@ -4,10 +4,10 @@
 
 Otava requires Python 3.8.  If you don't have python 3.8, use pyenv to install it.
 
-Use pipx to install otava:
+Use pip to install otava:
 
 ```
-pipx install git+ssh://git@github.com/apache/otava
+pip install apache-otava
 ```
 
 ## Build Docker container
