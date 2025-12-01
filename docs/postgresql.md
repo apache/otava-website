@@ -1,7 +1,7 @@
 # Importing results from PostgreSQL
 
 :::tip
-See [otava.yaml](https://github.com/apache/otava/tree/master/examples/postgresql/otava.yaml) for the full example configuration.
+See [otava.yaml](https://github.com/apache/otava/tree/master/examples/postgresql/config/otava.yaml) for the full example configuration.
 :::
 
 ## PostgreSQL Connection

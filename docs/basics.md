@@ -25,7 +25,7 @@ otava list-metrics <test>
 ### Example
 
 :::tip
-See [otava.yaml](https://github.com/apache/otava/tree/master/examples/csv/otava.yaml) for the full example configuration.
+See [otava.yaml](https://github.com/apache/otava/tree/master/examples/csv/config/otava.yaml) for the full example configuration.
 :::
 
 ```
