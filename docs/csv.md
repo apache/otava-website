@@ -22,7 +22,7 @@ tests:
 ## Example
 
 ```bash
-docker-compose -f examples/csv/docker-compose.yaml run --build otava bin/otava analyze local.sample
+docker-compose -f examples/csv/docker-compose.yaml run --rm otava analyze local.sample
 ```
 
 Expected output:
