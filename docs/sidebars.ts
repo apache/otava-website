@@ -28,6 +28,11 @@ const sidebars: SidebarsConfig = {
       label: "About",
     },
     {
+      type: "doc",
+      id: "download",
+      label: "Download",
+    },
+    {
       type: "category",
       label: "Getting Started",
       items: ["install", "getting-started", "contribute", "basics"],

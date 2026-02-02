@@ -86,6 +86,12 @@ const config: Config = {
         },
         {
           type: "doc",
+          docId: "download",
+          position: "right",
+          label: "Download",
+        },
+        {
+          type: "doc",
           docId: "community",
           position: "right",
           label: "Community",
