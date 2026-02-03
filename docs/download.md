@@ -17,11 +17,6 @@ specific language governing permissions and limitations
 under the License.
 -->
 
----
-sidebar_label: Download
-sidebar_position: 99
----
-
 # Download Apache Otava (Incubating)
 
 Apache Otava is released as source code tarballs with corresponding binary convenience artifacts. The latest release is available below.
