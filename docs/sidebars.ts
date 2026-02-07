@@ -35,7 +35,28 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Getting Started",
-      items: ["install", "getting-started", "contribute", "basics"],
+      items: [
+        {
+          type: "doc",
+          id: "install",
+          label: "Installation",
+        },
+        {
+          type: "doc",
+          id: "getting-started",
+          label: "Getting Started",
+        },
+        {
+          type: "doc",
+          id: "contribute",
+          label: "Contribute",
+        },
+        {
+          type: "doc",
+          id: "basics",
+          label: "Basics",
+        },
+      ],
       collapsed: false,
     },
     {

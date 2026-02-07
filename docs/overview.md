@@ -17,11 +17,6 @@ specific language governing permissions and limitations
 under the License.
 -->
 
----
-sidebar_label: About
-sidebar_position: 1
----
-
 # Welcome to Apache Otava
 
 ## Getting Started
