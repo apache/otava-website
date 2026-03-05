@@ -111,6 +111,7 @@ otava list-metrics <test>
 :::tip
 For more details, see [Finding Change Points](basics.md#finding-change-points) and
 [Validating Performance of a Feature Branch](basics.md#validating-performance-of-a-feature-branch).
+For an in-depth explanation of the underlying algorithm, see [Change Point Detection](math.md).
 :::
 
 ```

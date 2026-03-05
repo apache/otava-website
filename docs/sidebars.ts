@@ -60,6 +60,11 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
     },
     {
+      type: "doc",
+      id: "math",
+      label: "Change Point Detection",
+    },
+    {
       type: "category",
       label: "Data Sources",
       items: [

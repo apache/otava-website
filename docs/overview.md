@@ -24,6 +24,7 @@ under the License.
 - [Getting Started](getting-started.md)
 - [Contribute](contribute.md)
 - [Basics](basics.md)
+- [Change Point Detection](math.md)
 
 ## Data Sources
 - [Graphite](graphite.md)

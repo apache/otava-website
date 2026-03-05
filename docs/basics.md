@@ -67,7 +67,8 @@ from the values of the earlier runs and when the difference
 is persistent and statistically significant that it is unlikely to happen by chance.
 Otava calculates the probability (P-value) that the change point was caused
 by chance - the closer to zero, the more "sure" it is about the regression or
-performance improvement. The smaller is the actual magnitude of the change,
+performance improvement. For a detailed explanation of the mathematical foundations
+behind this algorithm, see [Change Point Detection](math.md). The smaller is the actual magnitude of the change,
 the more data points are needed to confirm the change, therefore Otava may
 not notice the regression immediately after the first run that regressed.
 However, it will eventually identify the specific commit that caused the regression,
