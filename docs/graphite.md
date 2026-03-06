@@ -16,11 +16,14 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
+---
+title: Graphite
+---
 
 # Importing results from Graphite
 
 :::tip
-See [otava.yaml](https://github.com/apache/otava/tree/master/examples/graphite/otava.yaml) for the full example configuration.
+See [otava.yaml](https://github.com/apache/otava/tree/master/examples/graphite/config/otava.yaml) for the full example configuration.
 :::
 
 ## Graphite and Grafana Connection
