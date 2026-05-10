@@ -33,30 +33,18 @@ You can verify releases using the provided signatures and checksums. The [KEYS](
 
 ## Latest Release
 
-### 0.7.0 (Latest)
+### 0.8.0 (Latest)
 
-Released: January 2025
+Released: May 2026
 
 | Package | Download | Signature | Checksum |
 |---------|----------|-----------|----------|
-| Source | [apache-otava-0.7.0-incubating-src.tar.gz](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz) | [asc](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz.asc) | [sha512](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz.sha512) |
+| Source | [apache-otava-0.8.0-incubating-src.tar.gz](https://www.apache.org/dyn/closer.lua/incubator/otava/0.8.0-incubating/apache-otava-0.8.0-incubating-src.tar.gz) | [asc](https://downloads.apache.org/incubator/otava/0.8.0-incubating/apache-otava-0.8.0-incubating-src.tar.gz.asc) | [sha512](https://downloads.apache.org/incubator/otava/0.8.0-incubating/apache-otava-0.8.0-incubating-src.tar.gz.sha512) |
+
+
+[Release Notes](https://github.com/apache/otava/releases/tag/0.8.0-incubating) | [Documentation](/docs/getting-started)
 
 **Other ways to install:**
-
-- **PyPI**: `pip install apache-otava==0.7.0`
-- **Docker**: `docker pull apache/otava:0.7.0`
-
-[Release Notes](https://github.com/apache/otava/releases/tag/0.7.0-incubating) | [Documentation](/docs/getting-started)
-
-## All Releases
-
-All Apache Otava releases are available from the [Apache Download Archive](https://archive.apache.org/dist/incubator/otava/).
-
-| Version | Release Date  | Download | Release Notes |
-|---------|---------------|----------|---------------|
-| 0.7.0 | December 2025 | [Source](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz) ([asc](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz.asc), [sha512](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz.sha512)) | [Notes](https://github.com/apache/otava/releases/tag/0.7.0-incubating) |
-| 0.6.1 | July 2025     | [Source](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.1-incubating/apache-otava-incubating-0.6.1-rc1-src.tar.gz) ([asc](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.1-incubating/apache-otava-incubating-0.6.1-rc1-src.tar.gz.asc), [sha512](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.1-incubating/apache-otava-incubating-0.6.1-rc1-src.tar.gz.sha512)) |  |
-| 0.6.0 | June 2025     | [Source](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.0-incubating/apache-otava-incubating-0.6.0-rc5-src.tar.gz) ([asc](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.0-incubating/apache-otava-incubating-0.6.0-rc5-src.tar.gz.asc), [sha512](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.0-incubating/apache-otava-incubating-0.6.0-rc5-src.tar.gz.sha512)) |  |
 
 ## Install from PyPI
 
@@ -69,7 +57,7 @@ pip install apache-otava
 For a specific version:
 
 ```bash
-pip install apache-otava==0.7.0
+pip install apache-otava==0.8.0
 ```
 
 ## Install from Docker
@@ -97,3 +85,15 @@ pip install -e .
 ```
 
 For more details, see the [Installation Guide](/docs/install) and [Getting Started](/docs/getting-started) documentation.
+
+
+## All Releases
+
+All Apache Otava releases are available from the [Apache Download Archive](https://archive.apache.org/dist/incubator/otava/).
+
+| Version | Release Date  | Download | Release Notes |
+|---------|---------------|----------|---------------|
+| 0.8.0 | May 2026 | [Source](https://dist.apache.org/repos/dist/dev/incubator/otava/0.8.0-incubating/apache-otava-0.8.0-incubating-src.tar.gz) ([asc](https://dist.apache.org/repos/dist/dev/incubator/otava/0.8.0-incubating/apache-otava-0.8.0-incubating-src.tar.gz.asc), [sha512](https://dist.apache.org/repos/dist/dev/incubator/otava/0.8.0-incubating/apache-otava-0.8.0-incubating-src.tar.gz.sha512)) | [Notes](https://github.com/apache/otava/releases/tag/0.8.0-incubating) |
+| 0.7.0 | December 2025 | [Source](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz) ([asc](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz.asc), [sha512](https://dist.apache.org/repos/dist/dev/incubator/otava/0.7.0-incubating/apache-otava-0.7.0-incubating-src.tar.gz.sha512)) | [Notes](https://github.com/apache/otava/releases/tag/0.7.0-incubating) |
+| 0.6.1 | July 2025     | [Source](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.1-incubating/apache-otava-incubating-0.6.1-rc1-src.tar.gz) ([asc](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.1-incubating/apache-otava-incubating-0.6.1-rc1-src.tar.gz.asc), [sha512](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.1-incubating/apache-otava-incubating-0.6.1-rc1-src.tar.gz.sha512)) |  |
+| 0.6.0 | June 2025     | [Source](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.0-incubating/apache-otava-incubating-0.6.0-rc5-src.tar.gz) ([asc](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.0-incubating/apache-otava-incubating-0.6.0-rc5-src.tar.gz.asc), [sha512](https://dist.apache.org/repos/dist/dev/incubator/otava/0.6.0-incubating/apache-otava-incubating-0.6.0-rc5-src.tar.gz.sha512)) |  |
