@@ -23,6 +23,10 @@ under the License.
 
 # Getting Started
 
+:::tip Prefer to try before installing?
+Run Otava in your browser at the [Otava Playground](http://playground.otava.apache.org/) — no install required.
+:::
+
 ## Installation
 
 Otava requires Python 3.8.  If you don't have Python 3.8, use pyenv to install it.

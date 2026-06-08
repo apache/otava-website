@@ -40,6 +40,12 @@ export default function HomepageFeatures(): JSX.Element {
               Get Started
             </a>
             <a
+              href="http://playground.otava.apache.org/"
+              className="button button--secondary button--lg"
+            >
+              Try in Browser
+            </a>
+            <a
               href="https://github.com/apache/otava"
               className="button button--secondary button--lg"
             >
