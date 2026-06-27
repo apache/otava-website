@@ -1,0 +1,126 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.lane {
+  stroke: var(--ifm-color-emphasis-300);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+.laneAlert {
+  stroke: var(--otava-regress);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+.packetIn {
+  fill: var(--ifm-color-primary);
+}
+.packetAlert {
+  fill: var(--otava-regress);
+}
+
+.srcNode {
+  fill: var(--ifm-background-surface-color);
+  stroke: var(--ifm-color-primary);
+  stroke-width: 1.5;
+}
+
+.nodeLabel {
+  fill: var(--ifm-font-color-base);
+  font-size: 13px;
+  font-weight: 600;
+  text-anchor: middle;
+  font-family: var(--ifm-font-family-base);
+}
+
+.engine {
+  fill: var(--ifm-color-primary);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+.engineAlert {
+  fill: var(--otava-regress);
+  filter: drop-shadow(0 0 14px rgba(255, 92, 138, 0.6));
+}
+.engineName {
+  fill: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+.engineSub {
+  fill: #fff;
+  font-size: 10px;
+  opacity: 0.9;
+  text-anchor: middle;
+  font-family: var(--ifm-font-family-monospace);
+}
+.engineSubAlert {
+  fill: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-anchor: middle;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+.alertNode {
+  fill: var(--ifm-background-surface-color);
+  stroke: var(--otava-regress);
+  stroke-width: 1.5;
+}
+.alertLabel {
+  fill: var(--otava-regress);
+  font-size: 12px;
+  font-weight: 700;
+  text-anchor: middle;
+  font-family: var(--ifm-font-family-base);
+}
+.actionNode {
+  fill: rgba(255, 212, 121, 0.12);
+  stroke: var(--otava-star);
+  stroke-width: 1.5;
+}
+.actionLabel {
+  fill: var(--otava-star);
+  font-size: 12px;
+  font-weight: 700;
+  text-anchor: middle;
+  font-family: var(--ifm-font-family-base);
+}
+
+.caption {
+  margin: 0.5rem auto 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 560px;
+  min-height: 2.4em;
+}

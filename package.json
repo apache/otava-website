@@ -19,6 +19,7 @@
     "@docusaurus/preset-classic": "*",
     "@mdx-js/react": "*",
     "clsx": "*",
+    "motion": "^12.42.0",
     "prism-react-renderer": "*",
     "react": "*",
     "react-dom": "*",

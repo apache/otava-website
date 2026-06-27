@@ -81,7 +81,7 @@ const config: Config = {
 
   themeConfig: {
     colorMode: {
-      defaultMode: "light",
+      defaultMode: "dark",
       disableSwitch: true,
     },
     // TODO: Replace with your project's social card

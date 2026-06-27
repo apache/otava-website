@@ -17,15 +17,48 @@
  * under the License.
  */
 
+/* ─────────────────────────────────────────────────────────────
+   Aurora theme — Otava (Finnish for the Big Dipper / Ursa Major).
+   Dark-first night-sky identity: indigo→teal aurora, with
+   semantic regression/improvement colors used across the product.
+   ───────────────────────────────────────────────────────────── */
+
 :root {
-  --ifm-color-primary: #3071a9;
+  /* Indigo primary */
+  --ifm-color-primary: #6d5dfc;
+  --ifm-color-primary-dark: #5747fb;
+  --ifm-color-primary-darker: #4a39fa;
+  --ifm-color-primary-darkest: #2e1ff5;
+  --ifm-color-primary-light: #8275fc;
+  --ifm-color-primary-lighter: #9084fd;
+  --ifm-color-primary-lightest: #b3abfe;
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-footer-background-color:rgba(115, 150, 233, 0.61);
+
+  /* Otava brand tokens (used by homepage components) */
+  --otava-accent2: #2bd9c4; /* teal — aurora gradient end */
+  --otava-regress: #ff5c8a; /* regression (bad)  */
+  --otava-improve: #56e39f; /* improvement (good) */
+  --otava-star: #ffd479; /* star highlight */
+  --otava-aurora: linear-gradient(120deg, #6d5dfc 0%, #8b5cf6 45%, #2bd9c4 100%);
+
+  --docusaurus-highlighted-code-line-bg: rgba(109, 93, 252, 0.12);
 }
 
+/* Dark is the primary, designed-for mode */
 [data-theme='dark'] {
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #0e0b1e;
+  --ifm-background-surface-color: #1b1733;
+  --ifm-font-color-base: #ece9fb;
+  --ifm-heading-color: #ffffff;
+  --ifm-navbar-background-color: rgba(14, 11, 30, 0.85);
+  --ifm-footer-background-color: #0a0818;
+
+  --ifm-color-emphasis-200: #2a2547;
+  --ifm-color-emphasis-300: #38325c;
+  --ifm-toc-border-color: #2a2547;
+
+  --docusaurus-highlighted-code-line-bg: rgba(109, 93, 252, 0.18);
 }
 
 .navbar__logo img {

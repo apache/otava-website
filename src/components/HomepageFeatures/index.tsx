@@ -19,11 +19,14 @@
 
 import clsx from "clsx";
 import styles from "./styles.module.css";
+import ChangePointDemo, { DEMOS } from "./ChangePointDemo";
+import FlowAnimation from "./FlowAnimation";
 
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
+        <FlowAnimation />
         <div className={clsx("text--center", "padding-horiz--md")}>
           <h2>Change Detection for Continuous Performance Engineering</h2>
           <p className={styles.description}>
@@ -52,6 +55,10 @@ export default function HomepageFeatures(): JSX.Element {
               Source Code
             </a>
           </div>
+        </div>
+        <div className={styles.demoGrid}>
+          <ChangePointDemo config={DEMOS.REGRESSION} />
+          <ChangePointDemo config={DEMOS.STABLE} />
         </div>
       </div>
     </section>
