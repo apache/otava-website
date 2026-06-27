@@ -1,0 +1,176 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+.container {
+  margin: 6rem auto 4rem;
+  max-width: 1100px;
+  padding: 0 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: var(--otava-aurora);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.75rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: #ece9fb;
+  opacity: 0.8;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.card {
+  background: rgba(27, 23, 51, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(109, 93, 252, 0.15);
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 16px;
+  background: radial-gradient(
+    800px circle at var(--x, 0px) var(--y, 0px),
+    rgba(43, 217, 196, 0.06),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.015);
+  border-color: rgba(43, 217, 196, 0.35);
+  box-shadow: 
+    0 12px 40px rgba(10, 8, 24, 0.5),
+    0 0 25px rgba(109, 93, 252, 0.15);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(109, 93, 252, 0.12);
+  color: var(--ifm-color-primary-light);
+  margin-bottom: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.iconWrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card:hover .iconWrapper {
+  background: var(--otava-aurora);
+  color: #ffffff;
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 0 15px rgba(109, 93, 252, 0.3);
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ece9fb;
+  opacity: 0.75;
+  margin: 0;
+  font-weight: 350;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .cardDesc {
+  opacity: 0.9;
+}
+
+@media (max-width: 996px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .container {
+    margin: 4rem auto 3rem;
+  }
+  .sectionTitle {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .container {
+    margin: 3rem auto 2rem;
+  }
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+  .sectionSubtitle {
+    font-size: 1.1rem;
+  }
+  .card {
+    padding: 1.75rem 1.5rem;
+  }
+}

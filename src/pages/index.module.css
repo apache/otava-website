@@ -78,3 +78,23 @@
   align-items: center;
   justify-content: center;
 }
+
+.heroSubtitle {
+  font-size: 1.4rem;
+  max-width: 750px;
+  margin: 1.5rem auto 0;
+  opacity: 0.85;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ece9fb;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .heroSubtitle {
+    font-size: 1.1rem;
+    margin: 1rem auto 0;
+    padding: 0 1rem;
+  }
+}
+

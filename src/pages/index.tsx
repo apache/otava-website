@@ -28,6 +28,9 @@ export default function Home(): JSX.Element {
       <header className={clsx("hero", styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">Apache Otava</h1>
+          <p className={styles.heroSubtitle}>
+            Continuous performance regression detection powered by statistical change point analysis.
+          </p>
         </div>
       </header>
       <main>

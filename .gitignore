@@ -28,3 +28,6 @@ pnpm-debug.log*
 # Patch files
 *.patch
 
+# Alternate package manager files
+pnpm-lock.yaml
+pnpm-workspace.yaml

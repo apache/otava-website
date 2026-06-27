@@ -21,6 +21,7 @@ import clsx from "clsx";
 import styles from "./styles.module.css";
 import ChangePointDemo, { DEMOS } from "./ChangePointDemo";
 import FlowAnimation from "./FlowAnimation";
+import FeaturesGrid from "./FeaturesGrid";
 
 export default function HomepageFeatures(): JSX.Element {
   return (
@@ -60,7 +61,9 @@ export default function HomepageFeatures(): JSX.Element {
           <ChangePointDemo config={DEMOS.REGRESSION} />
           <ChangePointDemo config={DEMOS.STABLE} />
         </div>
+        <FeaturesGrid />
       </div>
     </section>
   );
 }
+
