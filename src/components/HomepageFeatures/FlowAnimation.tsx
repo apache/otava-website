@@ -116,9 +116,7 @@ export default function FlowAnimation(): JSX.Element {
         viewBox={`0 0 ${W} ${H}`}
         className={styles.svg}
         role="img"
-        aria-label="Otava continuously records performance data from CSV,
-          PostgreSQL, BigQuery and Graphite. Only when it detects a real
-          regression does it alert Slack and recommend reverting the commit."
+        aria-label="Performance tests publish metrics like CPU and throughput to CSV, PostgreSQL, BigQuery, or Graphite. Otava continuously ingests and monitors them, alerting Slack only when a real regression is detected."
       >
         {/* in-lanes */}
         {SOURCES.map((_, i) => {
@@ -259,8 +257,8 @@ export default function FlowAnimation(): JSX.Element {
 
       <p className={styles.caption}>
         {alerting
-          ? "Regression detected → Otava alerts Slack and flags the commit to revert."
-          : "Otava continuously records performance data from every run — quietly, until something changes."}
+          ? "Persistent regression detected in metrics (e.g., CPU or throughput) → Otava alerts Slack and pinpoints the bad commit."
+          : "Performance tests publish metrics (like CPU and throughput) to data sources. Otava continuously ingests and monitors them — quietly, until something changes."}
       </p>
     </motion.div>
   );
