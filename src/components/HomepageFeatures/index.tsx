@@ -29,7 +29,7 @@ export default function HomepageFeatures(): JSX.Element {
       <div className="container">
         <FlowAnimation />
         <div className={clsx("text--center", "padding-horiz--md")}>
-          <h2>Change Detection for Continuous Performance Engineering</h2>
+          <h2 className={styles.title}>Change Detection for Continuous Performance Engineering</h2>
           <p className={styles.description}>
             Otava performs statistical analysis of performance test results
             stored in CSV files, PostgreSQL, BigQuery, or Graphite database. It
