@@ -258,7 +258,7 @@ export default function FlowAnimation(): JSX.Element {
       <p className={styles.caption}>
         {alerting
           ? "Persistent regression detected in metrics (e.g., CPU or throughput) → Otava alerts Slack and pinpoints the bad commit."
-          : "Performance tests publish metrics (like CPU and throughput) to data sources. Otava continuously ingests and monitors them — quietly, until something changes."}
+          : "Performance tests publish metrics (like CPU and throughput) to data sources. Otava continuously ingests and monitors them, quietly, until something changes."}
       </p>
     </motion.div>
   );

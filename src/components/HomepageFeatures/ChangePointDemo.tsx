@@ -99,7 +99,7 @@ const LINE_LEN = 900;
 
 // ── the two demos ──────────────────────────────────────────────
 const REGRESSION: DemoConfig = {
-  title: "A real regression — Otava alerts",
+  title: "A real regression: Otava alerts",
   metric: "throughput",
   values: [120, 118, 121, 119, 95, 97, 94, 96],
   commits: ["c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7"],
@@ -107,7 +107,7 @@ const REGRESSION: DemoConfig = {
   domain: [80, 130],
   qScale: 1,
   captions: [
-    { until: 0.12, text: "A single metric's history — one point per commit." },
+    { until: 0.12, text: "A single metric's history, with one point per commit." },
     {
       until: 0.44,
       text: "Score every possible before/after split by divergence (Q̂).",
@@ -115,7 +115,7 @@ const REGRESSION: DemoConfig = {
     { until: 0.54, text: "Lock onto the split with the highest divergence." },
     {
       until: 0.7,
-      text: "Confirm it with a significance test — whole segments, not single points.",
+      text: "Confirm it with a significance test of whole segments, not single points.",
     },
     {
       until: 1.01,
@@ -125,7 +125,7 @@ const REGRESSION: DemoConfig = {
 };
 
 const STABLE: DemoConfig = {
-  title: "Just noise — Otava stays quiet",
+  title: "Just noise: Otava stays quiet",
   metric: "throughput",
   values: [104, 117, 96, 112, 99, 119, 94, 110],
   commits: ["d0", "d1", "d2", "d3", "d4", "d5", "d6", "d7"],
@@ -536,7 +536,7 @@ function stableReport(cfg: DemoConfig): JSX.Element[] {
       ✓ No regressions found in {cfg.metric}.
     </span>,
     <span key="why" className={styles.reportIso}>
-      {"  best split rejected — p = 0.58 > 0.01 threshold"}
+      {"  best split rejected: p = 0.58 > 0.01 threshold"}
     </span>,
     <span key="quiet" className={styles.reportIso}>
       {"  8 data points recorded · 0 alerts sent"}
