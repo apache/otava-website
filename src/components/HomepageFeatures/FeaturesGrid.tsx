@@ -97,12 +97,6 @@ const FEATURES: FeatureItem[] = [
 export default function FeaturesGrid(): JSX.Element {
   return (
     <div className={styles.container}>
-      <div className="text--center margin-bottom--xl">
-        <h2 className={styles.sectionTitle}>Built for Continuous Performance Engineering</h2>
-        <p className={styles.sectionSubtitle}>
-          Otava fits into your workflow to catch regressions early and ensure stable releases.
-        </p>
-      </div>
       <div className={styles.grid}>
         {FEATURES.map((feature, idx) => (
           <div key={idx} className={styles.card} id={`feature-card-${idx}`}>

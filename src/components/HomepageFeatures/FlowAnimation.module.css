@@ -18,7 +18,7 @@
  */
 
 .wrap {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto 2.5rem;
   padding: 0 1rem;
 }
@@ -51,6 +51,12 @@
 .srcNode {
   fill: var(--ifm-background-surface-color);
   stroke: var(--ifm-color-primary);
+  stroke-width: 1.5;
+}
+
+.testNode {
+  fill: var(--ifm-background-surface-color);
+  stroke: var(--otava-accent2);
   stroke-width: 1.5;
 }
 

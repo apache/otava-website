@@ -37,19 +37,29 @@ import styles from "./FlowAnimation.module.css";
  */
 
 // SVG geometry
-const W = 720;
+const W = 880;
 const H = 248;
-const SRC_X = 26;
-const SRC_W = 96;
-const OUT_X = W - 26 - 120;
-const OUT_W = 120;
+
+// New Performance Test Node on the left
+const TEST_X = 24;
+const TEST_W = 140;
 const NODE_H = 34;
-const BOX_X = 300;
+
+// Data Sources shifted to the right
+const SRC_X = 236;
+const SRC_W = 96;
+
+// Otava box shifted to the right
+const BOX_X = 486;
 const BOX_W = 120;
 const BOX_Y = 92;
 const BOX_H = 64;
 const CX = BOX_X + BOX_W / 2;
 const CY = BOX_Y + BOX_H / 2;
+
+// Output nodes on the far right
+const OUT_X = W - 24 - 120; // 880 - 24 - 120 = 736
+const OUT_W = 120;
 
 const SOURCES = ["CSV", "PostgreSQL", "BigQuery", "Graphite"];
 
@@ -57,6 +67,8 @@ const srcY = (i: number) => 40 + i * 56; // 40, 96, 152, 208
 const ALERT_Y = 104;
 const ACTION_Y = 168;
 
+const testFrom = { x: TEST_X + TEST_W, y: CY };
+const testTo = (i: number) => ({ x: SRC_X, y: srcY(i) });
 const inFrom = (i: number) => ({ x: SRC_X + SRC_W, y: srcY(i) });
 const inTo = { x: BOX_X, y: CY };
 const outFrom = { x: BOX_X + BOX_W, y: CY };
@@ -70,9 +82,11 @@ const LOOP_MS = 9000;
 // A continuously-streaming data packet (always flowing = constant recording).
 function InPacket({
   from,
+  to,
   delay,
 }: {
   from: { x: number; y: number };
+  to: { x: number; y: number };
   delay: number;
 }) {
   return (
@@ -81,8 +95,8 @@ function InPacket({
       className={styles.packetIn}
       initial={{ cx: from.x, cy: from.y, opacity: 0 }}
       animate={{
-        cx: [from.x, inTo.x],
-        cy: [from.y, inTo.y],
+        cx: [from.x, to.x],
+        cy: [from.y, to.y],
         opacity: [0, 1, 1, 0],
       }}
       transition={{ duration: CYCLE, ease: "linear", repeat: Infinity, delay }}
@@ -116,9 +130,24 @@ export default function FlowAnimation(): JSX.Element {
         viewBox={`0 0 ${W} ${H}`}
         className={styles.svg}
         role="img"
-        aria-label="Performance tests publish metrics like CPU and throughput to CSV, PostgreSQL, BigQuery, or Graphite. Otava continuously ingests and monitors them, alerting Slack only when a real regression is detected."
+        aria-label="Performance tests run and publish metrics like CPU and throughput to CSV, PostgreSQL, BigQuery, or Graphite. Otava continuously ingests and monitors these sources, alerting Slack only when a real regression is detected."
       >
-        {/* in-lanes */}
+        {/* test-to-source lanes */}
+        {SOURCES.map((_, i) => {
+          const t = testTo(i);
+          return (
+            <line
+              key={`tl${i}`}
+              x1={testFrom.x}
+              y1={testFrom.y}
+              x2={t.x}
+              y2={t.y}
+              className={styles.lane}
+            />
+          );
+        })}
+
+        {/* source-to-otava lanes */}
         {SOURCES.map((_, i) => {
           const f = inFrom(i);
           return (
@@ -145,11 +174,20 @@ export default function FlowAnimation(): JSX.Element {
         {!reduce &&
           SOURCES.map((_, i) =>
             Array.from({ length: PACKETS_PER_LANE }).map((__, k) => (
-              <InPacket
-                key={`ip${i}-${k}`}
-                from={inFrom(i)}
-                delay={i * 0.16 + (k * CYCLE) / PACKETS_PER_LANE}
-              />
+              <g key={`packets-${i}-${k}`}>
+                {/* 1. from performance tests to data source */}
+                <InPacket
+                  from={testFrom}
+                  to={testTo(i)}
+                  delay={i * 0.16 + (k * CYCLE) / PACKETS_PER_LANE}
+                />
+                {/* 2. from data source to Otava (offset by half a cycle for smooth continuity) */}
+                <InPacket
+                  from={inFrom(i)}
+                  to={inTo}
+                  delay={i * 0.16 + (k * CYCLE) / PACKETS_PER_LANE + CYCLE / 2}
+                />
+              </g>
             )),
           )}
 
@@ -169,6 +207,21 @@ export default function FlowAnimation(): JSX.Element {
             />
           )}
         </AnimatePresence>
+
+        {/* performance tests node */}
+        <g>
+          <rect
+            x={TEST_X}
+            y={CY - NODE_H / 2}
+            width={TEST_W}
+            height={NODE_H}
+            rx={7}
+            className={styles.testNode}
+          />
+          <text x={TEST_X + TEST_W / 2} y={CY + 4} className={styles.nodeLabel}>
+            Performance Tests
+          </text>
+        </g>
 
         {/* source nodes */}
         {SOURCES.map((name, i) => (
@@ -258,8 +311,9 @@ export default function FlowAnimation(): JSX.Element {
       <p className={styles.caption}>
         {alerting
           ? "Persistent regression detected in metrics (e.g., CPU or throughput) → Otava alerts Slack and pinpoints the bad commit."
-          : "Performance tests publish metrics (like CPU and throughput) to data sources. Otava continuously ingests and monitors them, quietly, until something changes."}
+          : "Performance tests run continuously, publishing metrics (like CPU and throughput) to data sources. Otava pulls and analyzes them."}
       </p>
     </motion.div>
   );
 }
+
