@@ -18,8 +18,8 @@
  */
 
 .wrap {
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
+  max-width: 56.25rem;
+  margin: -1.5rem auto 7.5rem;
   padding: 0 1rem;
 }
 
@@ -74,7 +74,7 @@
 }
 .engineAlert {
   fill: var(--otava-regress);
-  filter: drop-shadow(0 0 14px rgba(255, 92, 138, 0.6));
+  filter: drop-shadow(0 0 14px rgba(181, 71, 74, 0.5));
 }
 .engineName {
   fill: #fff;
@@ -110,7 +110,7 @@
   font-family: var(--ifm-font-family-base);
 }
 .actionNode {
-  fill: rgba(255, 212, 121, 0.12);
+  fill: rgba(138, 63, 67, 0.1);
   stroke: var(--otava-star);
   stroke-width: 1.5;
 }
@@ -127,6 +127,6 @@
   text-align: center;
   font-size: 0.9rem;
   color: var(--ifm-color-emphasis-700);
-  max-width: 560px;
+  max-width: 35rem;
   min-height: 2.4em;
 }

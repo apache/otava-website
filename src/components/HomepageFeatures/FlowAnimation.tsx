@@ -161,14 +161,16 @@ export default function FlowAnimation(): JSX.Element {
             />
           );
         })}
-        {/* alert lane (lights up only when alerting) */}
-        <line
-          x1={outFrom.x}
-          y1={outFrom.y}
-          x2={alertTo.x}
-          y2={alertTo.y}
-          className={alerting ? styles.laneAlert : styles.lane}
-        />
+        {/* alert lane — only appears once Otava turns red (a change is detected) */}
+        {alerting && (
+          <line
+            x1={outFrom.x}
+            y1={outFrom.y}
+            x2={alertTo.x}
+            y2={alertTo.y}
+            className={styles.laneAlert}
+          />
+        )}
 
         {/* continuous inbound data packets */}
         {!reduce &&
@@ -301,7 +303,7 @@ export default function FlowAnimation(): JSX.Element {
                 className={styles.actionNode}
               />
               <text x={OUT_X + OUT_W / 2} y={ACTION_Y + 4} className={styles.actionLabel}>
-                ↩ revert PR
+                ↩ Revert PR
               </text>
             </motion.g>
           )}

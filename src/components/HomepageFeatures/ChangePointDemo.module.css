@@ -26,13 +26,13 @@
   --cp-muted: var(--ifm-color-emphasis-500);
 
   width: 100%;
-  max-width: 720px;
+  max-width: 45rem;
   margin: 0 auto;
   padding: 1rem 1.25rem 1.5rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  border-radius: 12px;
+  border: 0.0625rem solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
   background: var(--ifm-background-surface-color);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.06);
 }
 
 .title {
@@ -49,16 +49,16 @@
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.1rem 0.5rem;
-  border-radius: 999px;
+  border-radius: 62.4375rem;
   transition: opacity 0.4s ease;
 }
 .tagBad {
-  color: var(--otava-regress);
-  background: rgba(255, 92, 138, 0.12);
+  color: var(--status-error-text);
+  background: var(--status-error-subtle);
 }
 .tagGood {
-  color: var(--otava-improve);
-  background: rgba(86, 227, 159, 0.12);
+  color: var(--status-success-text);
+  background: var(--status-success-subtle);
 }
 
 .svg {
@@ -160,14 +160,14 @@
 }
 
 .reportWrap {
-  min-height: 150px;
+  min-height: 9.375rem;
   margin-top: 1rem;
 }
 
 .report {
-  background: #120f24;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 8px;
+  background: var(--neutral-900);
+  border: 0.0625rem solid var(--teal-900);
+  border-radius: 0.5rem;
   padding: 0.85rem 1rem;
   font-family: var(--ifm-font-family-monospace);
   font-size: 0.82rem;
