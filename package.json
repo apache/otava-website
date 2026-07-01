@@ -30,6 +30,8 @@
     "@docusaurus/module-type-aliases": "*",
     "@docusaurus/tsconfig": "*",
     "@docusaurus/types": "*",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "typescript": "*"
   },
   "browserslist": {
