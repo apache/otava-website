@@ -17,25 +17,12 @@
  * under the License.
  */
 
-import clsx from "clsx";
-import Layout from "@theme/Layout";
-import styles from "./index.module.css";
-import HomepageFeatures from "../components/HomepageFeatures";
+import React from 'react';
 
-export default function Home(): JSX.Element {
-  return (
-    <Layout title="Welcome">
-      <header className={clsx("hero", styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">Apache Otava</h1>
-          <p className={styles.heroSubtitle}>
-            Continuous performance regression detection powered by statistical change point analysis.
-          </p>
-        </div>
-      </header>
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
-  );
+declare global {
+  namespace JSX {
+    interface Element extends React.JSX.Element {}
+    interface ElementClass extends React.JSX.ElementClass {}
+    interface IntrinsicElements extends React.JSX.IntrinsicElements {}
+  }
 }

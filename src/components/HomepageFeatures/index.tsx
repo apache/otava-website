@@ -19,13 +19,17 @@
 
 import clsx from "clsx";
 import styles from "./styles.module.css";
+import ChangePointDemo, { DEMOS } from "./ChangePointDemo";
+import FlowAnimation from "./FlowAnimation";
+import FeaturesGrid from "./FeaturesGrid";
 
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
+        <FlowAnimation />
         <div className={clsx("text--center", "padding-horiz--md")}>
-          <h2>Change Detection for Continuous Performance Engineering</h2>
+          <h2 className={styles.title}>Change Detection for Continuous Performance Engineering</h2>
           <p className={styles.description}>
             Otava performs statistical analysis of performance test results
             stored in CSV files, PostgreSQL, BigQuery, or Graphite database. It
@@ -53,7 +57,13 @@ export default function HomepageFeatures(): JSX.Element {
             </a>
           </div>
         </div>
+        <div className={styles.demoGrid}>
+          <ChangePointDemo config={DEMOS.REGRESSION} />
+          <ChangePointDemo config={DEMOS.STABLE} />
+        </div>
+        <FeaturesGrid />
       </div>
     </section>
   );
 }
+
