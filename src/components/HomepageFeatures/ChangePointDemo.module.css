@@ -1,0 +1,219 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+.demo {
+  /* theme-adaptive palette */
+  --cp-line: var(--ifm-color-primary);
+  --cp-before: var(--otava-improve);
+  --cp-after: var(--otava-regress);
+  --cp-heat: var(--otava-accent2);
+  --cp-muted: var(--ifm-color-emphasis-500);
+
+  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 1.5rem;
+  border: 0.0625rem solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.06);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-heading-color);
+}
+.tagBad,
+.tagGood {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: 62.4375rem;
+  transition: opacity 0.4s ease;
+}
+.tagBad {
+  color: var(--status-error-text);
+  background: var(--status-error-subtle);
+}
+.tagGood {
+  color: var(--status-success-text);
+  background: var(--status-success-subtle);
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.axis {
+  stroke: var(--ifm-color-emphasis-300);
+  stroke-width: 1;
+}
+
+.line {
+  fill: none;
+  stroke: var(--cp-line);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dot {
+  fill: var(--cp-line);
+  transition: fill 0.4s ease;
+}
+.dotAfter {
+  fill: var(--cp-after);
+}
+
+.segBefore {
+  fill: var(--cp-before);
+  opacity: 0.08;
+}
+.segAfter {
+  fill: var(--cp-after);
+  opacity: 0.08;
+}
+
+.meanBefore {
+  stroke: var(--cp-before);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+}
+.meanAfter {
+  stroke: var(--cp-after);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+}
+
+.splitSweep {
+  stroke: var(--cp-muted);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+  opacity: 0.7;
+}
+.splitLocked {
+  stroke: var(--cp-after);
+  stroke-width: 2.5;
+}
+.splitRejected {
+  stroke: var(--cp-muted);
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+}
+
+.qcell {
+  fill: var(--cp-heat);
+  transition: opacity 0.2s ease;
+}
+.qlabel {
+  fill: var(--cp-muted);
+  font-size: 11px;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+.commit {
+  fill: var(--cp-muted);
+  font-size: 11px;
+  text-anchor: middle;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+.badge {
+  fill: var(--ifm-background-color);
+  stroke: var(--cp-after);
+  stroke-width: 1.5;
+}
+.badgePct {
+  fill: var(--cp-after);
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--ifm-font-family-monospace);
+}
+.badgeMeta {
+  fill: var(--cp-muted);
+  font-size: 10px;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+.reportWrap {
+  min-height: 9.375rem;
+  margin-top: 1rem;
+}
+
+.report {
+  background: var(--neutral-900);
+  border: 0.0625rem solid var(--teal-900);
+  border-radius: 0.5rem;
+  padding: 0.85rem 1rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #c9d1d9;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.reportLine {
+  white-space: pre;
+}
+
+.reportCmd {
+  color: #7ee787;
+}
+.reportHdr {
+  color: #e3b341;
+  font-weight: 700;
+}
+.reportBad {
+  color: var(--cp-after);
+}
+.reportIso {
+  color: #8b949e;
+}
+.commitBad {
+  color: var(--cp-after);
+  font-weight: 700;
+}
+.commitGood {
+  color: var(--cp-before);
+  font-weight: 700;
+}
+.reportAct {
+  color: var(--otava-star);
+}
+.reportOk {
+  color: var(--cp-before);
+  font-weight: 700;
+}
+
+.caption {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  min-height: 2.5em;
+}

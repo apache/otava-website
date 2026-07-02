@@ -77,6 +77,10 @@ const config: Config = {
         "sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66gy8m5B",
       crossorigin: "anonymous",
     },
+    {
+      href: "https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400;500;700&display=swap",
+      type: "text/css",
+    },
   ],
 
   themeConfig: {

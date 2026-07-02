@@ -18,3 +18,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sw?
+
+# Patch files
+*.patch
+
+# Alternate package manager files
+pnpm-lock.yaml
+pnpm-workspace.yaml
