@@ -45,11 +45,21 @@
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     margin-top: 2.5rem;
     margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 640px) {
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 320px;
+        margin: 2.5rem auto 6rem;
+    }
 }
 
 .demoGrid {
