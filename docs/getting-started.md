@@ -47,7 +47,7 @@ Copy the main configuration file `resources/otava.yaml` to `~/.otava/otava.yaml`
 
 :::tip
 See docs on specific data sources to learn more about their configuration - [CSV](csv.md), [Graphite](graphite.md),
-[PostgreSQL](postgresql.md), or [BigQuery](big-query.md).
+[PostgreSQL](postgresql.md), [BigQuery](big-query.md), or [InfluxDB](influxdb.md).
 :::
 
 Alternatively, it is possible to leave the config file as is, and provide credentials in the environment
@@ -57,8 +57,9 @@ Environment variables are interpolated before interpreting the configuration fil
 ## Defining tests
 
 All test configurations are defined in the main configuration file.
-Otava supports reading data from and publishing results to a CSV file, [Graphite](https://graphiteapp.org/),
-[PostgreSQL](https://www.postgresql.org/), and [BigQuery](https://cloud.google.com/bigquery).
+Otava supports reading data from a CSV file, [Graphite](https://graphiteapp.org/),
+[PostgreSQL](https://www.postgresql.org/), [BigQuery](https://cloud.google.com/bigquery), and
+[InfluxDB](https://www.influxdata.com/).
 
 Tests are defined in the `tests` section. For example, the following definition will import results of the test from a CSV file:
 
