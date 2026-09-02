@@ -34,5 +34,6 @@ under the License.
 - [Graphite](graphite.md)
 - [PostgreSQL](postgresql.md)
 - [BigQuery](big-query.md)
+- [InfluxDB](influxdb.md)
 - [CSV](csv.md)
 - [Annotating Change Points in Grafana](grafana.md)

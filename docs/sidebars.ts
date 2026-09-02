@@ -85,6 +85,11 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "influxdb",
+          label: "InfluxDB",
+        },
+        {
+          type: "doc",
           id: "csv",
           label: "CSV",
         },
