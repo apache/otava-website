@@ -32,6 +32,7 @@ under the License.
 
 ## Data Sources
 - [Graphite](graphite.md)
+- [Grafana](grafana.md)
 - [PostgreSQL](postgresql.md)
 - [BigQuery](big-query.md)
 - [InfluxDB](influxdb.md)
