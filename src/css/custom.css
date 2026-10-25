@@ -136,6 +136,30 @@
   width: 80%;
 }
 
+.markdown .doc-figure {
+  margin: 2rem 0;
+}
+
+.markdown .doc-figure > p {
+  margin-bottom: 0;
+}
+
+.markdown .doc-figure img {
+  display: block;
+  margin-inline: auto;
+}
+
+.markdown .doc-figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.markdown .doc-figure figcaption > p {
+  margin-bottom: 0;
+}
+
 .header-github-link:hover {
   opacity: 0.6;
 }
