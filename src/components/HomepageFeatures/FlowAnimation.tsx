@@ -38,7 +38,7 @@ import styles from "./FlowAnimation.module.css";
 
 // SVG geometry
 const W = 880;
-const H = 248;
+const H = 360;
 
 // New Performance Test Node on the left
 const TEST_X = 24;
@@ -52,7 +52,7 @@ const SRC_W = 96;
 // Otava box shifted to the right
 const BOX_X = 486;
 const BOX_W = 120;
-const BOX_Y = 92;
+const BOX_Y = 148;
 const BOX_H = 64;
 const CX = BOX_X + BOX_W / 2;
 const CY = BOX_Y + BOX_H / 2;
@@ -63,9 +63,9 @@ const OUT_W = 120;
 
 const SOURCES = ["CSV", "PostgreSQL", "BigQuery", "Graphite", "InfluxDB", "Graphana"];
 
-const srcY = (i: number) => 40 + i * 56; // 40, 96, 152, 208
-const ALERT_Y = 104;
-const ACTION_Y = 168;
+const srcY = (i: number) => 40 + i * 56; // 40, 96, 152, 208, 264, 320
+const ALERT_Y = 160;
+const ACTION_Y = 224;
 
 const testFrom = { x: TEST_X + TEST_W, y: CY };
 const testTo = (i: number) => ({ x: SRC_X, y: srcY(i) });

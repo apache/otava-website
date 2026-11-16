@@ -130,3 +130,16 @@
   max-width: 35rem;
   min-height: 2.4em;
 }
+
+@media screen and (max-width: 640px) {
+  .wrap {
+    margin: -0.5rem auto 3.5rem;
+    padding: 0;
+  }
+
+  .caption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+}
