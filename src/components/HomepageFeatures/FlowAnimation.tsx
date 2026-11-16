@@ -61,7 +61,7 @@ const CY = BOX_Y + BOX_H / 2;
 const OUT_X = W - 24 - 120; // 880 - 24 - 120 = 736
 const OUT_W = 120;
 
-const SOURCES = ["CSV", "PostgreSQL", "BigQuery", "Graphite", "InfluxDB", "Graphana"];
+const SOURCES = ["CSV", "PostgreSQL", "BigQuery", "Graphite", "InfluxDB", "Grafana"];
 
 const srcY = (i: number) => 40 + i * 56; // 40, 96, 152, 208, 264, 320
 const ALERT_Y = 160;
