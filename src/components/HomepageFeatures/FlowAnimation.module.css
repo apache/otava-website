@@ -18,8 +18,8 @@
  */
 
 .wrap {
-  max-width: 56.25rem;
-  margin: -1.5rem auto 7.5rem;
+  max-width: 72rem;
+  margin: -0.5rem auto 5rem;
   padding: 0 1rem;
 }
 
@@ -123,11 +123,11 @@
 }
 
 .caption {
-  margin: 0.5rem auto 0;
+  margin: 0.75rem auto 0;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--ifm-color-emphasis-700);
-  max-width: 35rem;
+  max-width: 42rem;
   min-height: 2.4em;
 }
 
