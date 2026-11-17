@@ -38,7 +38,7 @@ import styles from "./FlowAnimation.module.css";
 
 // SVG geometry
 const W = 880;
-const H = 360;
+const H = 248;
 
 // New Performance Test Node on the left
 const TEST_X = 24;
@@ -52,7 +52,7 @@ const SRC_W = 96;
 // Otava box shifted to the right
 const BOX_X = 486;
 const BOX_W = 120;
-const BOX_Y = 148;
+const BOX_Y = 92;
 const BOX_H = 64;
 const CX = BOX_X + BOX_W / 2;
 const CY = BOX_Y + BOX_H / 2;
@@ -62,10 +62,13 @@ const OUT_X = W - 24 - 120; // 880 - 24 - 120 = 736
 const OUT_W = 120;
 
 const SOURCES = ["CSV", "PostgreSQL", "BigQuery", "Graphite", "InfluxDB", "Grafana"];
+const VISIBLE_SLOTS = 3;
+const SOURCE_SWITCH_P = 0.25; // rotate mid-recording, well before alerting at p = 0.55
+const SOURCE_STEP = VISIBLE_SLOTS;
 
-const srcY = (i: number) => 40 + i * 56; // 40, 96, 152, 208, 264, 320
-const ALERT_Y = 160;
-const ACTION_Y = 224;
+const srcY = (i: number) => 68 + i * 56; // 68, 124, 180 (centered on CY = 124)
+const ALERT_Y = 104;
+const ACTION_Y = 168;
 
 const testFrom = { x: TEST_X + TEST_W, y: CY };
 const testTo = (i: number) => ({ x: SRC_X, y: srcY(i) });
@@ -114,6 +117,20 @@ export default function FlowAnimation(): JSX.Element {
   const [p, setP] = useState(reduce ? 0.75 : 0);
   useMotionValueEvent(progress, "change", setP);
 
+  const batchIndex = useTransform(time, (t) => {
+    if (reduce) return 0;
+    const loop = Math.floor(t / LOOP_MS);
+    const loopP = (t % LOOP_MS) / LOOP_MS;
+    return loop + (loopP >= SOURCE_SWITCH_P ? 1 : 0);
+  });
+  const [batch, setBatch] = useState(0);
+  useMotionValueEvent(batchIndex, "change", setBatch);
+
+  const visibleSources = Array.from({ length: VISIBLE_SLOTS }, (_, i) => {
+    const idx = (batch * SOURCE_STEP + i) % SOURCES.length;
+    return SOURCES[idx];
+  });
+
   // Most of the loop = quietly recording. A change is "detected" late in the
   // loop, which fires the alert + action.
   const alerting = p >= 0.55 && p < 0.92;
@@ -130,10 +147,10 @@ export default function FlowAnimation(): JSX.Element {
         viewBox={`0 0 ${W} ${H}`}
         className={styles.svg}
         role="img"
-        aria-label="Performance tests run and publish metrics like CPU and throughput to CSV, PostgreSQL, BigQuery, or Graphite. Otava continuously ingests and monitors these sources, alerting Slack only when a real regression is detected."
+        aria-label={`Performance tests run and publish metrics like CPU and throughput to ${SOURCES.join(", ")}. Otava continuously ingests and monitors these sources, alerting Slack only when a real regression is detected.`}
       >
         {/* test-to-source lanes */}
-        {SOURCES.map((_, i) => {
+        {Array.from({ length: VISIBLE_SLOTS }, (_, i) => {
           const t = testTo(i);
           return (
             <line
@@ -148,7 +165,7 @@ export default function FlowAnimation(): JSX.Element {
         })}
 
         {/* source-to-otava lanes */}
-        {SOURCES.map((_, i) => {
+        {Array.from({ length: VISIBLE_SLOTS }, (_, i) => {
           const f = inFrom(i);
           return (
             <line
@@ -174,7 +191,7 @@ export default function FlowAnimation(): JSX.Element {
 
         {/* continuous inbound data packets */}
         {!reduce &&
-          SOURCES.map((_, i) =>
+          Array.from({ length: VISIBLE_SLOTS }, (_, i) =>
             Array.from({ length: PACKETS_PER_LANE }).map((__, k) => (
               <g key={`packets-${i}-${k}`}>
                 {/* 1. from performance tests to data source */}
@@ -225,9 +242,9 @@ export default function FlowAnimation(): JSX.Element {
           </text>
         </g>
 
-        {/* source nodes */}
-        {SOURCES.map((name, i) => (
-          <g key={name}>
+        {/* source nodes (fixed 4 slots cycling through all sources) */}
+        {visibleSources.map((name, i) => (
+          <g key={`slot-${i}`}>
             <rect
               x={SRC_X}
               y={srcY(i) - NODE_H / 2}
@@ -236,9 +253,20 @@ export default function FlowAnimation(): JSX.Element {
               rx={7}
               className={styles.srcNode}
             />
-            <text x={SRC_X + SRC_W / 2} y={srcY(i) + 4} className={styles.nodeLabel}>
-              {name}
-            </text>
+            <AnimatePresence mode="wait">
+              <motion.text
+                key={name}
+                x={SRC_X + SRC_W / 2}
+                y={srcY(i) + 4}
+                className={styles.nodeLabel}
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                transition={{ duration: 0.25 }}
+              >
+                {name}
+              </motion.text>
+            </AnimatePresence>
           </g>
         ))}
 
