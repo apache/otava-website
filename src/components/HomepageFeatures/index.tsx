@@ -32,7 +32,7 @@ export default function HomepageFeatures(): JSX.Element {
           <h2 className={styles.title}>Change Detection for Continuous Performance Engineering</h2>
           <p className={styles.description}>
             Otava performs statistical analysis of performance test results
-            stored in CSV files, PostgreSQL, BigQuery, or Graphite database. It
+            stored in CSV files, PostgreSQL, BigQuery, Graphite, and more. It
             finds change-points and notifies about possible performance
             regressions.
           </p>
