@@ -242,7 +242,7 @@ export default function FlowAnimation(): JSX.Element {
           </text>
         </g>
 
-        {/* source nodes (fixed 4 slots cycling through all sources) */}
+        {/* source nodes (fixed slots cycling through all sources) */}
         {visibleSources.map((name, i) => (
           <g key={`slot-${i}`}>
             <rect
