@@ -25,7 +25,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "overview",
-      label: "About",
+      label: "Overview",
     },
     {
       type: "doc",
@@ -44,7 +44,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "doc",
           id: "getting-started",
-          label: "Getting Started",
+          label: "Quick Start",
         },
         {
           type: "doc",
@@ -55,6 +55,11 @@ const sidebars: SidebarsConfig = {
           type: "doc",
           id: "basics",
           label: "Basics",
+        },
+        {
+          type: "doc",
+          id: "tuning",
+          label: "Tuning",
         },
       ],
       collapsed: false,
