@@ -61,7 +61,7 @@ const CY = BOX_Y + BOX_H / 2;
 const OUT_X = W - 24 - 120; // 880 - 24 - 120 = 736
 const OUT_W = 120;
 
-const SOURCES = ["CSV", "PostgreSQL", "BigQuery", "Graphite", "InfluxDB", "Grafana"];
+const SOURCES = ["CSV", "PostgreSQL", "BigQuery", "Graphite", "InfluxDB"];
 const VISIBLE_SLOTS = 3;
 const SOURCE_SWITCH_P = 0.25; // rotate mid-recording, well before alerting at p = 0.55
 const SOURCE_STEP = VISIBLE_SLOTS;
@@ -147,7 +147,7 @@ export default function FlowAnimation(): JSX.Element {
         viewBox={`0 0 ${W} ${H}`}
         className={styles.svg}
         role="img"
-        aria-label={`Performance tests run and publish metrics like CPU and throughput to ${SOURCES.join(", ")}. Otava continuously ingests and monitors these sources, alerting Slack only when a real regression is detected.`}
+        aria-label={`Performance tests run and publish metrics to ${SOURCES.join(", ")}. Otava continuously ingests and monitors these sources, alerting Slack only when a real regression is detected.`}
       >
         {/* test-to-source lanes */}
         {Array.from({ length: VISIBLE_SLOTS }, (_, i) => {
@@ -340,8 +340,8 @@ export default function FlowAnimation(): JSX.Element {
 
       <p className={styles.caption}>
         {alerting
-          ? "Persistent regression detected in metrics (e.g., CPU or throughput) → Otava alerts Slack and pinpoints the bad commit."
-          : "Performance tests run continuously, publishing metrics (like CPU and throughput) to data sources. Otava pulls and analyzes them."}
+          ? "Persistent regression detected in metrics → Otava alerts Slack and pinpoints the bad commit."
+          : "Performance tests run continuously, publishing metrics to data sources. Otava pulls and analyzes them."}
       </p>
     </motion.div>
   );
